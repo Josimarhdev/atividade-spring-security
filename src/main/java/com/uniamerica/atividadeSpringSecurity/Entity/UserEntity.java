@@ -27,9 +27,16 @@ public class UserEntity implements UserDetails {
     @Column(name="id", nullable = false, unique = true)
     protected Long id;
 
-
+    @Getter
+    @Setter
     private String username;
+
+    @Getter
+    @Setter
     private String password;
+
+    @Getter
+    @Setter
     private String role;
 
     @Override
@@ -48,6 +55,8 @@ public class UserEntity implements UserDetails {
         // TODO Auto-generated method stub
         return username;
     }
+
+
 
     @Override
     public boolean isAccountNonExpired() {
